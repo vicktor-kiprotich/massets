@@ -1,9 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\API\AssetController;
->>>>>>> 8f4ec1b379dbe2b72cd0748f8cbed691fb6a3402
 use Illuminate\Http\Request;
 
 /*
