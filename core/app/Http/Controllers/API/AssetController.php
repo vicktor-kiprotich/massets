@@ -39,7 +39,7 @@ class AssetController extends Controller
     public function show($id)
     {
         // Find the asset by its ID
-        $asset = AssetsModel::where('assettag', $id)->orWhere('serial', $id)->firs();
+        $asset = AssetsModel::where('assettag', $id)->orWhere('serial', $id)->first();
 
         // If the asset doesn't exist, return a 404 response
         if (!$asset) {
