@@ -47,7 +47,7 @@ class AssetController extends Controller
         }
 
         // Return the found asset as a JSON response
-        return response()->json($asset);
+        return response()->json(['status' => true, 'message' => 'Data fetched in successfully', 'data' => $asset]);
     }
 
     // Update the specified resource in storage.
