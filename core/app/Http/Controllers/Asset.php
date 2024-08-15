@@ -278,8 +278,8 @@ class Asset extends Controller
       
             if($request->hasFile('picture')) {
                 $this->validate($request, ['picture' => 'mimes:jpeg,png,jpg|max:2048'],$message);
-                $picturename  = date('mdYHis').uniqid().$request->file('picture')->getClientOriginalName();
-                $request->file('picture')->move(public_path("/upload/assets"), $picturename);
+                $file = $request->file('image');
+                $path = $file->store('images', 'public');
                 $data       = array('name'=>$name, 
                             'locationid'=>$locationid,
                             'supplierid'=>$supplierid,
@@ -293,7 +293,7 @@ class Asset extends Controller
                             'cost'=>$cost,
                             'warranty'=>$warranty,
                             'status'=>$status,
-                            'picture'=>$picturename,
+                            'picture'=>$path,
                             'description'=>$description,
                             'created_at'=>$created_at,
                             'updated_at'=>$updated_at);
