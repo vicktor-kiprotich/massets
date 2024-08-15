@@ -67,7 +67,7 @@ class Asset extends Controller
         order by assets.created_at desc"); 
         return Datatables::of($data)
         ->addColumn('pictures',function($single){
-            return '<img src="'.url('/').'/upload/assets/'.$single->picture.'" style="width:90px"/>';
+            return '<img src="'.url('/').'/storage/'.$single->picture.'" style="width:90px"/>';
         })
         ->addColumn( 'action', function ( $accountsingle ) {
             //for checkout 2 button, checkin or checkout depand the record
