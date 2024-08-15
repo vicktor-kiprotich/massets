@@ -278,7 +278,7 @@ class Asset extends Controller
       
             if($request->hasFile('picture')) {
                 $this->validate($request, ['picture' => 'mimes:jpeg,png,jpg|max:2048'],$message);
-                $file = $request->file('image');
+                $file = $request->file('picture');
                 $path = $file->store('images', 'public');
                 $data       = array('name'=>$name, 
                             'locationid'=>$locationid,
