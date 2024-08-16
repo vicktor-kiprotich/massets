@@ -12,17 +12,17 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/style.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap/bootstrap.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css')}}" type="text/css">
 
     <!-- Script -->
-    <script src="{{ asset('js/jquery-3.5.1.min.js')}}"></script>
-    <script src="{{ asset('js/general.js')}}"></script>
-    <script src="{{ asset('js/popper.min.js')}}"></script>
-    <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{ asset ('plugin/jqueryvalidation/jquery.validate.js')}}"></script>
-    <script src="{{ asset('plugin/jqueryvalidation/additional-methods.js')}}"></script>
+    <script src="{{ asset('assets/js/jquery-3.5.1.min.js')}}"></script>
+    <script src="{{ asset('assets/js/general.js')}}"></script>
+    <script src="{{ asset('assets/js/popper.min.js')}}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset ('passets/lugin/jqueryvalidation/jquery.validate.js')}}"></script>
+    <script src="{{ asset('assets/plugin/jqueryvalidation/additional-methods.js')}}"></script>
        
     
    

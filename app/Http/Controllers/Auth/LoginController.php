@@ -46,63 +46,65 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function logout() {
+    public function logout()
+    {
         Auth::logout();
         return redirect('/login');
-      }
-      
+    }
+
     public function authenticate(Request $request)
     {
-		$email      = $request->input('email');
-        $password   = $request->input('password');
+        $email = $request->input('email');
+        $password = $request->input('password');
         // Validations
         $rules = [
-        'email'=>'required|email',
-        'password'=>'required|min:4'
+            'email' => 'required|email',
+            'password' => 'required|min:4'
         ];
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
-        // Validation failed
-        return response()->json([
-            'message' => $validator->messages(),
-        ]);
+            // Validation failed
+            return response()->json([
+                'message' => $validator->messages(),
+            ]);
         } else {
 
-        // Fetch User
-        //$user = User::where('email',$request->email)->first();
-        $user = Auth::attempt(['email' => $email, 'password' => $password, 'status' => '1']);
-        if($user) {
+            // Fetch User
+            //$user = User::where('email',$request->email)->first();
+            $user = Auth::attempt(['email' => $email, 'password' => $password, 'status' => '1']);
+            if ($user) {
 
                 $res['success'] = 'success';
-                return response($res);
-        } else {
+                return redirect('/home');
+            } else {
                 $res['success'] = 'failed';
-                $res['message']= trans('lang.invalid_login'); 
+                $res['message'] = trans('lang.invalid_login');
                 return response($res);
+            }
         }
-        }
-       
+
     }
 
 
     /**
-	 * get application settings
-	 *
-	 * @return object
-	 */
-	public function getapplication() {
-		$data = DB::table('settings')->where('settingsid', '1')->first();
-		if ($data) {
+     * get application settings
+     *
+     * @return object
+     */
+    public function getapplication()
+    {
+        $data = DB::table('settings')->where('settingsid', '1')->first();
+        if ($data) {
 
-			$res['success'] = true;
-			$res['data']  = $data;
-			$res['message'] = 'list data';
-			return response($res);
-		}
-	}
-	
-	public function showLoginForm()
-   {
-       return view('auth.login');
-   }
+            $res['success'] = true;
+            $res['data'] = $data;
+            $res['message'] = 'list data';
+            return response($res);
+        }
+    }
+
+    public function showLoginForm()
+    {
+        return view('auth.login');
+    }
 }
