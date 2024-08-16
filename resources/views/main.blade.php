@@ -4,33 +4,33 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="{{ asset('upload/favicon.png')}}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/upload/favicon.png')}}">
     <title>Assets Management System</title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/style.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('plugin/datatables2/datatables.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/datepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap/bootstrap.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/plugin/datatables2/datatables.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/datepicker.css') }}">
     
     <!-- Script -->
-    <script src="{{ asset('js/jquery-3.5.1.min.js')}}"></script>
+    <script src="{{ asset('assets/js/jquery-3.5.1.min.js')}}"></script>
     
-    <script src="{{ asset('js/popper.min.js')}}"></script>
-    <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('js/bootstrap-datepicker.js')}}"></script>
-    <script src="{{ asset('js/jquery-ui.min.js')}}"></script>
-    <script src="{{ asset('plugin/chart/moment.min.js')}}"></script>
-    <script src="{{ asset('plugin/chart/Chart.min.js')}}"></script>
-    <script src="{{ asset('plugin/chart/utils.js')}}"></script>
-    <script src="{{ asset ('plugin/jqueryvalidation/jquery.validate.js')}}"></script>
-    <script src="{{ asset('plugin/jqueryvalidation/additional-methods.js')}}"></script>
-    <script src="{{ asset('plugin/datatables2/datatables.min.js')}}"></script>
-    <script src="{{ asset('js/general.js')}}"></script>
+    <script src="{{ asset('assets/js/popper.min.js')}}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('assets/js/bootstrap-datepicker.js')}}"></script>
+    <script src="{{ asset('assets/js/jquery-ui.min.js')}}"></script>
+    <script src="{{ asset('assets/plugin/chart/moment.min.js')}}"></script>
+    <script src="{{ asset('assets/plugin/chart/Chart.min.js')}}"></script>
+    <script src="{{ asset('assets/plugin/chart/utils.js')}}"></script>
+    <script src="{{ asset ('assets/plugin/jqueryvalidation/jquery.validate.js')}}"></script>
+    <script src="{{ asset('assets/plugin/jqueryvalidation/additional-methods.js')}}"></script>
+    <script src="{{ asset('assets/plugin/datatables2/datatables.min.js')}}"></script>
+    <script src="{{ asset('assets/js/general.js')}}"></script>
 
 
 </head>
@@ -40,7 +40,7 @@
     <div class="sidebar">
         <div class="sidebar-wrapper">
             <div class="logo">
-                <img class="logoimg" src="" style="width:200px" />
+                <img class="logoimg" src="<?php echo asset('assets/upload/logo.png')?>" style="width:200px" />
                 </a>
             </div>
             <ul class="nav">
@@ -48,7 +48,7 @@
                 <li class="{{ Request::is( 'home') ? 'active' : '' }}">
                     <a href="{{ URL::to( 'home') }}">
                         <p><img width="22"
-                                src="<?php echo asset('images/icon-dashboard.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.dashboard');?>
+                                src="<?php echo asset('assets/images/icon-dashboard.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.dashboard');?>
                         </p>
                     </a>
                 </li>
@@ -57,7 +57,7 @@
                 <li class="{{ Request::is( 'assetlist') ? 'active' : '' }}">
                     <a href="{{ URL::to( 'assetlist') }}">
                         <p><img width="22"
-                                src="<?php echo asset('images/icon-asset.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.assetmenu');?>
+                                src="<?php echo asset('assets/images/icon-asset.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.assetmenu');?>
                         </p>
                     </a>
                 </li>
@@ -65,7 +65,7 @@
                 <li class="{{ Request::is( 'componentlist') ? 'active' : '' }}">
                     <a href="{{ URL::to( 'componentlist') }}">
                         <p><img width="22"
-                                src="<?php echo asset('images/icon-component.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.componentmenu');?>
+                                src="<?php echo asset('assets/images/icon-component.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.componentmenu');?>
                         </p>
                     </a>
                 </li>
@@ -73,7 +73,7 @@
                 <li class="{{ Request::is( 'maintenancelist') ? 'active' : '' }}">
                     <a href="{{ URL::to( 'maintenancelist') }}">
                         <p><img width="22"
-                                src="<?php echo asset('images/icon-maintenance.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.maintenancemenu');?>
+                                src="<?php echo asset('assets/images/icon-maintenance.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.maintenancemenu');?>
                         </p>
                     </a>
                 </li>
@@ -81,7 +81,7 @@
                 <li class="{{ Request::is( 'depreciationlist') ? 'active' : '' }}">
                     <a href="{{ URL::to( 'depreciationlist') }}">
                         <p><img width="22"
-                                src="<?php echo asset('images/icon-depreciation.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.depreciationmenu');?>
+                                src="<?php echo asset('assets/images/icon-depreciation.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.depreciationmenu');?>
                         </p>
                     </a>
                 </li>
@@ -89,7 +89,7 @@
                 <li class="{{ Request::is( 'assettypelist') ? 'active' : '' }}">
                     <a href="{{ URL::to( 'assettypelist') }}">
                         <p><img width="22"
-                                src="<?php echo asset('images/icon-type.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.assettypemenu');?>
+                                src="<?php echo asset('assets/images/icon-type.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.assettypemenu');?>
                         </p>
                     </a>
                 </li>
@@ -97,7 +97,7 @@
                 <li class="{{ Request::is( 'brandlist') ? 'active' : '' }}">
                     <a href="{{ URL::to( 'brandlist') }}">
                         <p><img width="25"
-                                src="<?php echo asset('images/icon-manufacturer.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.brandmenu');?>
+                                src="<?php echo asset('assets/images/icon-manufacturer.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.brandmenu');?>
                         </p>
                     </a>
                 </li>
@@ -105,7 +105,7 @@
                 <li class="{{ Request::is( 'supplierlist') ? 'active' : '' }}">
                     <a href="{{ URL::to( 'supplierlist') }}">
                         <p><img width="25"
-                                src="<?php echo asset('images/icon-supplier.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.suppliermenu');?>
+                                src="<?php echo asset('assets/images/icon-supplier.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.suppliermenu');?>
                         </p>
                     </a>
                 </li>
@@ -113,14 +113,14 @@
                 <li class="{{ Request::is( 'locationlist') ? 'active' : '' }}">
                     <a href="{{ URL::to( 'locationlist') }}">
                         <p><img width="25"
-                                src="<?php echo asset('images/icon-location.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.locationmenu');?>
+                                src="<?php echo asset('assets/images/icon-location.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.locationmenu');?>
                         </p>
                     </a>
                 </li>
                 <li class="{{ Request::is( 'employeeslist') ? 'active' : '' }}">
                     <a href="{{ URL::to( 'employeeslist') }}">
                         <p><img width="25"
-                                src="<?php echo asset('images/icon-employee.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.employeemenu');?>
+                                src="<?php echo asset('assets/images/icon-employee.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.employeemenu');?>
                         </p>
                     </a>
                 </li>
@@ -128,7 +128,7 @@
                 <li class="{{ Request::is( 'departmentlist') ? 'active' : '' }}">
                     <a href="{{ URL::to( 'departmentlist') }}">
                         <p><img width="20"
-                                src="<?php echo asset('images/icon-department.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.departmentmenu');?>
+                                src="<?php echo asset('assets/images/icon-department.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.departmentmenu');?>
                         </p>
                     </a>
                 </li>
@@ -137,7 +137,7 @@
                 <li class="{{ Request::is( 'reports/allreports') ? 'active' : '' }}">
                     <a href="{{ URL::to( 'reports/allreports') }}">
                         <p><img width="25"
-                                src="<?php echo asset('images/icon-report.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.reportmenu');?>
+                                src="<?php echo asset('assets/images/icon-report.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.reportmenu');?>
                         </p>
                     </a>
                 </li>
@@ -149,7 +149,7 @@
                         aria-expanded="{{Request::is( 'settings/profile') || Request::is( 'settings/allusers') || Request::is( 'settings/application') ? 'true' : 'false' }}">
                         <i class="ti-settings"></i>
                         <p><img width="25"
-                                src="<?php echo asset('images/icon-setting.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.settingmenu');?>
+                                src="<?php echo asset('assets/images/icon-setting.png')?>" />&nbsp;&nbsp;&nbsp;<?php echo trans('lang.settingmenu');?>
                         </p>
                     </a>
                     <div class="{{ Request::is( 'settings/profile') || Request::is( 'settings/allusers') || Request::is( 'settings/application') ? 'collapse in' : 'collapse' }}"
@@ -359,17 +359,17 @@
 
             
             //get app setting
-            $.ajax({
-                type: "GET",
-                url: "{{ url('settings')}}",
-                dataType: "JSON",
-                success: function(data) {
-                    $("#id").val('1');
-                    $(".company").html(data.data.company);
-                    $(".setcurrency").html(data.data.currency);
-                    $(".logoimg").attr("src", data.logo);
-                }
-            });
+            // $.ajax({
+            //     type: "GET",
+            //     url: "{{ url('settings')}}",
+            //     dataType: "JSON",
+            //     success: function(data) {
+            //         $("#id").val('1');
+            //         $(".company").html(data.data.company);
+            //         $(".setcurrency").html(data.data.currency);
+            //         $(".logoimg").attr("src", data.logo);
+            //     }
+            // });
             //datepicker
             $('.setdate').datepicker({
                 autoclose: true,

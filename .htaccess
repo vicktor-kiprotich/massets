@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect all traffic to the public directory
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    Options +FollowSymLinks
+
+    # Check if the request is for a real file or directory
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Handle requests for files in the storage directory
+    RewriteRule ^storage/(.*)$ storage/$1 [L]
+
+    # Redirect all other requests to index.php
+    RewriteRule ^ index.php [L]
+</IfModule>

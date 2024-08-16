@@ -13,7 +13,7 @@
                             <div class="col-md-3">
                                 <div class="text-center">
                                     <img width="42"
-                                src="<?php echo asset('images/icon-asset.png')?>" />
+                                src="<?php echo asset('assets/images/icon-asset.png')?>" />
                                 </div>
                             </div>
                             <div class="col-xs-7 home-detail" >
@@ -40,7 +40,7 @@
                             <div class="col-md-3">
                                 <div class="text-center">
                                     <img width="42"
-                                src="<?php echo asset('images/icon-component.png')?>" />
+                                src="<?php echo asset('assets/images/icon-component.png')?>" />
                                 </div>
                             </div>
                             <div class="col-xs-7 home-detail" >
@@ -67,7 +67,7 @@
                             <div class="col-md-3">
                                 <div class="text-center">
                                     <img width="42"
-                                src="<?php echo asset('images/icon-maintenance.png')?>" />
+                                src="<?php echo asset('assets/images/icon-maintenance.png')?>" />
                                 </div>
                             </div>
                             <div class="col-xs-7 home-detail" >
@@ -95,7 +95,7 @@
                             <div class="col-md-3">
                                 <div class="text-center">
                                     <img width="42"
-                                src="<?php echo asset('images/icon-employee.png')?>" />
+                                src="<?php echo asset('assets/images/icon-employee.png')?>" />
                                 </div>
                             </div>
                             <div class="col-xs-7 home-detail" >
