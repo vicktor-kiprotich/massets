@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ComponentModel extends Model
 {
+    protected $table = 'component'; 
+
     //
 }
