@@ -121,6 +121,7 @@ Route::post('updatesettings', 'Settings@update');
 Route::get('asset', 'Asset@getdata');
 Route::get('listasset', 'Asset@getrows');
 Route::post('saveasset', 'Asset@save');
+Route::post('importasset', 'Asset@import');
 Route::post('updateasset', 'Asset@update');
 Route::post('deleteasset', 'Asset@delete');
 Route::post('assetbyid', 'Asset@byid');
